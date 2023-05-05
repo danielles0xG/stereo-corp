@@ -1,0 +1,53 @@
+/*******************************************************/
+/***************** 22. Call To Action ******************/
+/*******************************************************/
+.call-to-action
+    .section-title
+        h2
+            font-size: 30px
+            +xs-d
+                font-size: 25px
+            
+/* Call Action Two */
+.call-to-action-two
+    .section-title
+        h2
+            +xl-d
+                font-size: 48px
+            
+/* Call Action Three */
+.call-action-three
+    +overlay($red-color, 0.95)
+    h2
+        font-size: 30px
+        text-transform: uppercase
+        +xs-d
+            font-size: 25px
+            
+/* Footer Call to Action */
+.footer-call-action-inner
+    +gapboth(padding, 60px)
+    +sm-d
+        +gapboth(padding, 25px)
+.footer-call-action-content
+    h2
+        font-size: 30px
+        +xs-d
+            font-size: 25px
+        
+/* Call Action Four */
+.call-action-four
+    background-size: cover
+    +ms-d
+        +gapboth(padding, 35px)
+    +xs-d
+        +gapboth(padding, 25px)
+    .section-title
+        max-width: 700px
+    .right-image
+        z-index: -1
+        right: -10px
+        bottom: -40px
+        max-width: 40%
+        position: absolute
+    

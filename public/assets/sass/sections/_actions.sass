@@ -1,0 +1,234 @@
+/*******************************************************/
+/***************** 29. Actions Section *****************/
+/*******************************************************/
+.actions-section
+    z-index: 1
+    position: relative
+    &:before
+        left: 10%
+        top: 50%
+        content: ''
+        opacity: 0.2
+        z-index: -1
+        +size(500px, 300px)
+        position: absolute
+        filter: blur(150px)
+        background: $green-color
+        transform: translateY(-50%)
+    &:after
+        left: 0
+        top: 0
+        content: ''
+        z-index: -2
+        +size(100%, 130%)
+        position: absolute
+        background: #040B11
+
+.actions-active
+    +gapboth(margin, -15px)
+    .action-item
+        +gapboth(margin, 15px)
+    
+.action-item
+    padding: 15px
+    border-radius: 5px
+    margin-bottom: 30px
+    background: #1B2429
+    border: 1px solid rgba(255, 255, 255, 0.15)
+    .image
+        position: relative
+        img
+            width: 100%
+            border-radius: 5px
+        .count-down
+            left: 15px
+            bottom: 15px
+            display: flex
+            background: white
+            border-radius: 5px
+            position: absolute
+            +gapTB(padding, 7px)
+            width: calc(100% - 30px)
+            li
+                width: 25%
+                line-height: 1
+                font-size: 10px
+                text-align: center
+                color: $base-color
+                span
+                    display: block
+                    font-size: 16px
+                    font-weight: 700
+                    color: $heading-color
+                &:not(:last-child)
+                    border-right: 1px solid rgba(7, 1, 47, 0.1)
+    .content
+        padding: 20px 15px 5px
+        .bid-dots
+            margin-bottom: 5px
+            +flexcenter(space-between)
+            .bid
+                font-size: 14px
+                font-weight: 500
+                font-family: 'Urbanist', sans-serif
+                b
+                    font-weight: 700
+            .dots
+                +size(30px, 16px)
+                border-radius: 2px
+                +flexcenter(center)
+                background: rgba(255, 255, 255, 0.1)
+                span
+                    +size(3px)
+                    margin: 1.5px
+                    background: white
+                    border-radius: 50%
+        .author-wish
+            margin-top: 15px
+            padding-top: 20px
+            +flexcenter(space-between)
+            border-top: 1px dashed rgba(255, 255, 255, 0.2)
+            .author
+                line-height: 1
+                +flexcenter(center)
+                img
+                    +size(34px)
+                    border-radius: 50%
+                    margin-right: 10px
+                h6
+                    font-size: 14px
+                    margin-bottom: 0
+                    font-weight: 700
+                    letter-spacing: -0.03em
+                span
+                    font-size: 12px
+                    color: #A0A4A8
+            .wish
+                font-size: 14px
+                i
+                    margin-right: 5px
+                    
+.collection-section
+    position: relative
+    z-index: 1
+    &:after,
+    &:before
+        content: ''
+        z-index: -1
+        opacity: 0.1
+        position: absolute
+        +size(600px, 400px)
+        filter: blur(100px)
+        background: $green-color
+        transform: translateY(-50%)
+    &:before
+        right: 0
+        top: 0
+    &:after
+        left: 0
+        top: 50%
+
+.collection-filter
+    display: flex
+    flex-wrap: wrap
+    margin-right: -10px
+    li
+        z-index: 1
+        cursor: pointer
+        font-weight: 600
+        position: relative
+        padding: 5px 18px
+        border-radius: 2px
+        background: #1B2429
+        margin-right: 20px
+        margin-bottom: 10px
+        font-family: 'Urbanist', sans-serif
+        border: 1.5px solid rgba(255, 255, 255, 0.1)
+        +md-d
+            margin-right: 10px
+        +xs-d
+            font-size: 14px
+        &:before
+            content: ''
+            position: absolute
+            +size(100%)
+            left: 0
+            top: 0
+            opacity: 0
+            z-index: -1
+            transition: 0.5s
+            border-radius: 2px
+            background: linear-gradient(90deg, #A146E8 -21.46%, #6C63D0 36.39%, #387DB8 100%)
+        &:hover,
+        &.current
+            &:before
+                opacity: 1
+            
+/* Cagegory Collection */
+.collection-category-area
+    &:after,
+    &:before
+        content: ''
+        z-index: -1
+        opacity: 0.1
+        position: absolute
+        +size(600px, 400px)
+        filter: blur(100px)
+        background: $green-color
+    &:before
+        left: 0
+        bottom: -10%
+    &:after
+        top: 10%
+        right: 0
+.collection-category-active
+    +gapboth(margin, -15px)
+    .collection-category-item
+        +gapboth(margin, 15px)
+    .slick-arrow
+        border: none
+        position: absolute
+        bottom: calc(50% + 33px)
+        &.prev
+            left: 15px
+        &.next
+            right: 15px
+        &:before
+            opacity: 1
+        
+.collection-category-item
+    padding: 10px
+    border-radius: 5px
+    margin-bottom: 30px
+    background: #1B2429
+    border: 1px solid rgba(255, 255, 255, 0.15)
+    .category-images
+        .row
+            +gapboth(margin, -5px)
+            > div
+                +gapboth(padding, 5px)
+        a
+            width: 100%
+            margin-bottom: 10px
+            display: inline-flex
+            img
+                width: 100%
+                border-radius: 5px
+    .title-dots
+        display: flex
+        padding: 10px 20px
+        align-items: flex-end
+        justify-content: space-between
+        h4
+            margin-bottom: 8px
+        .dots
+            +size(26px, 34px)
+            border-radius: 2px
+            +flexcenter(center)
+            flex-direction: column
+            background: rgba(255, 255, 255, 0.2)
+            span
+                +size(3px)
+                margin: 1.5px 3px
+                background: white
+                border-radius: 50%

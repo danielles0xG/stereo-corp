@@ -1,0 +1,94 @@
+/*******************************************************/
+/***************** 28. Protects Section ****************/
+/*******************************************************/
+.protect-left-part
+    margin-left: -45px
+    position: relative
+    padding-right: 20px
+    display: inline-block
+    +md-d
+        margin-left: 0
+    .video-play
+        +size(165px)
+        text-align: center
+        line-height: 165px
+        border-radius: 50%
+        background: url(../images/protects/video.jpg) no-repeat center/cover
+        +overlay(#030A15, 0.8)
+        position: absolute
+        right: 0
+        bottom: 60px
+        +ms-d
+            +size(100px)
+            line-height: 100px
+        &:before
+            border-radius: 50%
+        i
+            +size(60px)
+            color: white
+            line-height: 60px
+            background: $red-color
+            &:after
+                left: 50%
+                top: 50%
+                content: ''
+                position: absolute
+                border: 1px solid white
+                +circle(transparent, 45px)
+                transform: translate(-50%, -50%)
+.protect-content
+    max-width: 425px
+.protect-item
+    display: flex
+    transition: 0.5s
+    padding: 25px 30px
+    border-radius: 5px
+    +gapboth(margin, -30px)
+    +md-d
+        background: white
+    +xs-d
+        display: block
+    .icon
+        flex: none
+        color: white
+        font-size: 40px
+        margin-right: 30px
+        margin-bottom: 15px
+        +circle($red-color, 80px)
+    p
+        margin-bottom: 0
+        transition: 0.5s
+    &:hover
+        background: #030A15
+        h4 a, p
+            color: white
+        
+/* Ready Section */
+.ready-content
+    z-index: 2
+    background: white
+    position: relative
+    padding: 55px 70px 60px 100px
+    box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.1)
+    +mt-d
+        +gapboth(padding, 50px)
+    +tt-d
+        margin-right: -50px
+    +mo-d
+        +gapboth(padding, 50px)
+    +xs-d
+        +gapboth(padding, 25px)
+    .list-style-three
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        li
+            width: 48%
+            margin-bottom: 20px
+            +ms-d
+                width: 100%
+.ready-image
+    +tt-d
+        margin-left: -100px
+    img
+        width: 100%

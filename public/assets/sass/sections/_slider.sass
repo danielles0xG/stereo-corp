@@ -1,0 +1,107 @@
+/*******************************************************/
+/******************* 27. Main Slider *******************/
+/*******************************************************/
+.main-slider-wrap
+    .image
+        +size(100%)
+        position: absolute
+        +flexcenter(center)
+        img
+            flex: none
+            max-width: none
+            min-width: 100%
+            min-height: 100%
+        &:before
+            position: absolute
+            content: ''
+            +size(100%)
+            left: 0
+            top: 0
+            z-index: 1
+            background: linear-gradient(90deg, #03091F 0%, rgba(3, 9, 31, 0.5) 100%)
+    .slider-caption
+        z-index: 2
+        min-height: 828px
+        position: relative
+        padding-top: 92px
+        +flexcenter(center)
+        padding-bottom: 100px
+        +lg-d
+            min-height: 700px
+        +tb-d
+            min-height: 600px
+    .slick-arrow
+        top: 50%
+        z-index: 2
+        opacity: 0.2
+        font-size: 22px
+        transition: 0.5s
+        color: $red-color
+        position: absolute
+        +circle(white, 60px)
+        transform: translateY(-50%)
+        +ms-d
+            +size(40px)
+            font-size: 18px
+            line-height: 40px
+        i
+            transition: 0.5s
+            color: $red-color
+        &.prev
+            left: 200px
+            +lg-d
+                left: 25px
+        &.next
+            right: 200px
+            +lg-d
+                right: 25px
+        &:hover, &:focus
+            background: $red-color
+            i
+                color: white
+    &:hover
+        .slick-arrow
+            opacity: 1
+.main-slider-content
+    max-width: 610px
+    .sub-title
+        margin-bottom: 10px
+        display: inline-block
+        text-transform: uppercase
+    h1
+        margin-bottom: 20px
+        +lg-d
+            font-size: 60px
+        +tb-d
+            font-size: 50px
+        +mo-d
+            font-size: 45px
+        +ms-d
+            font-size: 40px
+        +sm-d
+            font-size: 35px
+        +xs-d
+            font-size: 30px
+    p
+        font-size: 18px
+        max-width: 555px
+        +sm-d
+            font-size: 16px
+    .slider-btns
+        padding-top: 20px
+        .theme-btn
+            margin-top: 15px
+            &:not(:last-child)
+                margin-right: 30px
+    *
+        animation-duration: 1s
+        animation-fill-mode: both
+.slick-active
+    *
+        animation-name: fadeInUp
+    h1
+        animation-delay: 0.25s
+    p
+        animation-delay: 0.5s
+    .slider-btns
+        animation-delay: 0.75s

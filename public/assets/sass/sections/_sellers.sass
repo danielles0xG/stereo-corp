@@ -1,0 +1,67 @@
+/*******************************************************/
+/***************** 30. Sellers Section *****************/
+/*******************************************************/
+.sellers-section
+    overflow: hidden
+    .container
+        &:before
+            top: 0
+            left: 50%
+            content: ''
+            z-index: -1
+            opacity: 0.1
+            position: absolute
+            +size(600px, 400px)
+            filter: blur(100px)
+            background: $green-color
+            transform: translate(-50%)
+        &:after
+            left: 50%
+            top: 50%
+            content: ''
+            z-index: -2
+            position: absolute
+            background: #0F1625
+            +size(calc(100% + 230px), 100%)
+            transform: translate(-50%, -50%)
+.sellers-active
+    +gapboth(margin, -15px)
+    .seller-item
+        +gapboth(margin, 15px)
+    
+.seller-item
+    padding: 20px
+    position: relative
+    border-radius: 5px
+    margin-bottom: 30px
+    background: #1B2429
+    text-align: center
+    border: 1px solid rgba(255, 255, 255, 0.15)
+    .number
+        top: 20px
+        right: 20px
+        color: #A0A4A8
+        font-size: 14px
+        position: absolute
+        font-family: 'Urbanist', sans-serif
+        +circle(rgba(196, 196, 196, 0.1), 30px)
+    .image
+        position: relative
+        display: inline-block
+        img
+            +size(100px)
+            border-radius: 50%
+        .check
+            bottom: 0
+            right: 15%
+            font-size: 8px
+            position: absolute
+            +circle(linear-gradient(90deg, #A146E8 -21.46%, #6C63D0 36.39%, #387DB8 100%), 20px)
+    h5
+        margin: 15px 0 0
+    .items
+        color: #CACCCF
+        font-size: 14px
+        font-weight: 500
+        font-family: 'Urbanist', sans-serif
+        
